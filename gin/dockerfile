@@ -1,0 +1,13 @@
+FROM golang:1.16beta1
+
+WORKDIR /go/src/api/
+
+# 開発用にairを入れている。
+RUN apt-get update \
+  && apt-get install git \
+  && go get github.com/gin-gonic/gin \
+  && go get -u github.com/cosmtrek/air \
+  && go get github.com/jinzhu/gorm \
+  && go get github.com/go-sql-driver/mysql
+
+EXPOSE 8080
