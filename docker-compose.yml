@@ -1,13 +1,22 @@
 version: '3'
 services:
   api:
-    build: ./gin # dockerfileがあるディレクトリを書く
+    build: ./gin
     container_name: gin_container
     tty: true
     ports:
       - "8080:8080"
     volumes:
       - ./gin/src/api:/go/src/api
+  vuejs:
+    build: ./vuejs
+    container_name: vuecli3
+    tty: true
+    ports:
+      - "18080:3000"
+    volumes:
+      - ./vuejs/src:/app
+    # stdin_open: true
   mysql:
     build: ./mysql
     container_name: mysql_container

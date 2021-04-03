@@ -1,0 +1,15 @@
+{
+	"name": "Gin&Gorm&MySQL Train",
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+	],
+	"service": "vuejs",
+	"workspaceFolder": "/app",
+	"settings": {
+		"terminal.integrated.shell.linux": null
+	},
+	"extensions": [
+		"octref.vetur"
+	],
+	// "shutdownAction": "stopCompose",
+}
